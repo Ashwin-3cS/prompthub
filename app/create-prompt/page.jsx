@@ -18,7 +18,7 @@ const CreatePrompt = () => {
 
     );
 
-    const creatPrompt = async (e) => {
+    const createPrompt = async (e) => {
         e.preventDefault();
         setSubmitting(true);
 
@@ -48,7 +48,7 @@ const CreatePrompt = () => {
             post = {post}
             setPost = {setPost}
             submitting={submitting}
-            handleSubmit={creatPrompt}
+            handleSubmit={createPrompt}
         />
     </div>
   )
