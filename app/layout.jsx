@@ -10,6 +10,11 @@ export const metadata = {
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
+        <head>
+            <title>{metadata.title}</title>
+            <meta name="description" content={metadata.description} />
+            <link rel="icon" href="/assets/images/logo.svg" />
+        </head>
         <body>
             <Provider>
                 <div className='main'>
