@@ -24,6 +24,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
            placeholder='Write your prompt here'
            required
            className='form_textarea'
+           spellCheck={false}
           />       
         </label>
         <label >
