@@ -4,7 +4,6 @@ import { connectToDB } from '@utils/database';
 
 import User from '@models/user';
 
-
 const handler = NextAuth({
     providers : [   
         GoogleProvider({
@@ -36,13 +35,14 @@ const handler = NextAuth({
                 )
             }
 
+
             return true;
         } catch (error) {
             console.log(error)
             return false;
         }
     },
-    async session ({session}){
+    async session ({session}){ // authenticated user details
         const sessionUser =  await User.findOne({
             email:session.user.email
         })
